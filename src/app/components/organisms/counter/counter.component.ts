@@ -1,3 +1,5 @@
+import { ButtonComponent } from '@/components/atoms/button/button.component';
+import { TitleComponent } from '@/components/molecules/title/title.component';
 import { AppState } from '@/store/app.state';
 import {
   decrement,
@@ -14,7 +16,7 @@ import { Observable } from 'rxjs';
   selector: 'app-counter',
   templateUrl: './counter.component.html',
   styleUrls: ['./counter.component.scss'],
-  imports: [CommonModule],
+  imports: [CommonModule, TitleComponent, ButtonComponent],
 })
 export class CounterComponent {
   count$: Observable<number>;
@@ -23,15 +25,15 @@ export class CounterComponent {
     this.count$ = this.store.select(selectCount);
   }
 
-  increment() {
+  increment = () => {
     this.store.dispatch(increment());
-  }
+  };
 
-  decrement() {
+  decrement = () => {
     this.store.dispatch(decrement());
-  }
+  };
 
-  setCount(value: number) {
+  setCount = (value = 2) => {
     this.store.dispatch(setCount({ count: value }));
-  }
+  };
 }

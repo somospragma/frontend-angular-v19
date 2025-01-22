@@ -1,5 +1,17 @@
-# Angular 19 arquetipo
+# Angular 19 archetype
 
-Arquetipo de angular 19 con store ngrx, husky para precommits y linters.
+Angular 19 archetype with store ngrx, husky for precommits and linters.
 
-Realizado por Kevin Zarama
+Made by Kevin Zarama
+
+## Install
+
+```console
+npm install
+```
+
+## Run
+
+```console
+ng serve
+```

@@ -1,6 +1,7 @@
 <div class="counter">
-  <h1>Counter: {{ count$ | async }}</h1>
-  <button (click)="increment()">Increment</button>
-  <button (click)="decrement()">Decrement</button>
-  <button (click)="setCount(42)">Set to 42</button>
+  <app-title [title]="'Counter: ' + (count$ | async)" />
+
+  <app-button [text]="'increment'" [action]="increment" />
+  <app-button [text]="'decrement'" [action]="decrement" />
+  <app-button [text]="'set number 42'" [action]="setCount" [param]="42" />
 </div>
