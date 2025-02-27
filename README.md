@@ -42,3 +42,4 @@ ng serve
 - Typescript-eslint 8.20.0
 - Typescript 5.5.2
 # frontend-angular-v19
+# frontend-angular-v19
